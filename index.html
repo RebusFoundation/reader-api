@@ -1778,13 +1778,13 @@ fetch(<span class="hljs-string">'/activity-{id}'</span>,
     <span class="hljs-attr">"profile"</span>: {},
     <span class="hljs-attr">"preferences"</span>: {},
     <span class="hljs-attr">"json"</span>: {},
-    <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-06-25T15:45:29Z"</span>,
-    <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-06-25T15:45:29Z"</span>
+    <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-06-25T19:27:53Z"</span>,
+    <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-06-25T19:27:53Z"</span>
   },
   <span class="hljs-attr">"summaryMap"</span>: {
     <span class="hljs-attr">"en"</span>: <span class="hljs-string">"string"</span>
   },
-  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-06-25T15:45:29Z"</span>
+  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-06-25T19:27:53Z"</span>
 }
 </code></pre>
 <h3 id="get__activity-{id}-responses">Responses</h3>
@@ -2326,13 +2326,13 @@ fetch(<span class="hljs-string">'/reader-{id}/activity'</span>,
         <span class="hljs-attr">"profile"</span>: {},
         <span class="hljs-attr">"preferences"</span>: {},
         <span class="hljs-attr">"json"</span>: {},
-        <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-06-25T15:45:29Z"</span>,
-        <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-06-25T15:45:29Z"</span>
+        <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-06-25T19:27:53Z"</span>,
+        <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-06-25T19:27:53Z"</span>
       },
       <span class="hljs-attr">"summaryMap"</span>: {
         <span class="hljs-attr">"en"</span>: <span class="hljs-string">"string"</span>
       },
-      <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-06-25T15:45:29Z"</span>
+      <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-06-25T19:27:53Z"</span>
     }
   ]
 }
@@ -3006,6 +3006,18 @@ fetch(<span class="hljs-string">'/reader-{id}/library'</span>,
       <span class="hljs-attr">"replies"</span>: [
         <span class="hljs-string">"string"</span>
       ],
+      <span class="hljs-attr">"json"</span>: {},
+      <span class="hljs-attr">"resources"</span>: [
+        {
+          <span class="hljs-attr">"href"</span>: <span class="hljs-string">"string"</span>,
+          <span class="hljs-attr">"mediaType"</span>: <span class="hljs-string">"string"</span>,
+          <span class="hljs-attr">"rel"</span>: <span class="hljs-string">"string"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"string"</span>,
+          <span class="hljs-attr">"hreflang"</span>: <span class="hljs-string">"string"</span>,
+          <span class="hljs-attr">"height"</span>: <span class="hljs-number">0</span>,
+          <span class="hljs-attr">"width"</span>: <span class="hljs-number">0</span>
+        }
+      ],
       <span class="hljs-attr">"description"</span>: <span class="hljs-string">"string"</span>,
       <span class="hljs-attr">"datePublished"</span>: <span class="hljs-string">"string"</span>,
       <span class="hljs-attr">"readerId"</span>: <span class="hljs-string">"string"</span>,
@@ -3228,6 +3240,69 @@ fetch(<span class="hljs-string">'/reader-{id}/library'</span>,
 <td>none</td>
 </tr>
 <tr>
+<td>»» json</td>
+<td>object</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>»» resources</td>
+<td>[<a href="#schema#/definitions/link">#/definitions/link</a>]</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>»»» href</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>»»» mediaType</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>»»» rel</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>»»» name</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>»»» hreflang</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>»»» height</td>
+<td>integer</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>»»» width</td>
+<td>integer</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
 <td>»» description</td>
 <td>string</td>
 <td>false</td>
@@ -3388,6 +3463,13 @@ fetch(<span class="hljs-string">'/reader-{id}/notes'</span>,
 <td>keyword to search for in the content of notes. Not case sensitive.</td>
 </tr>
 <tr>
+<td>stack</td>
+<td>query</td>
+<td>string</td>
+<td>false</td>
+<td>the collection (tag with type 'reader:Stack')</td>
+</tr>
+<tr>
 <td>orderBy</td>
 <td>query</td>
 <td>string</td>
@@ -3444,8 +3526,8 @@ fetch(<span class="hljs-string">'/reader-{id}/notes'</span>,
       <span class="hljs-attr">"oa:hasSelector"</span>: {},
       <span class="hljs-attr">"content"</span>: <span class="hljs-string">"string"</span>,
       <span class="hljs-attr">"@context"</span>: [],
-      <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-06-25T15:45:29Z"</span>,
-      <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-06-25T15:45:29Z"</span>,
+      <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-06-25T19:27:53Z"</span>,
+      <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-06-25T19:27:53Z"</span>,
       <span class="hljs-attr">"publication"</span>: {
         <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>,
         <span class="hljs-attr">"author"</span>: [
@@ -3796,8 +3878,8 @@ fetch(<span class="hljs-string">'/reader-{id}'</span>,
   <span class="hljs-attr">"profile"</span>: {},
   <span class="hljs-attr">"preferences"</span>: {},
   <span class="hljs-attr">"json"</span>: {},
-  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-06-25T15:45:29Z"</span>,
-  <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-06-25T15:45:29Z"</span>
+  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-06-25T19:27:53Z"</span>,
+  <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-06-25T19:27:53Z"</span>
 }
 </code></pre>
 <h3 id="get__reader-{id}-responses">Responses</h3>
@@ -4096,8 +4178,8 @@ fetch(<span class="hljs-string">'/whoami'</span>,
   <span class="hljs-attr">"profile"</span>: {},
   <span class="hljs-attr">"preferences"</span>: {},
   <span class="hljs-attr">"json"</span>: {},
-  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-06-25T15:45:29Z"</span>,
-  <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-06-25T15:45:29Z"</span>
+  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-06-25T19:27:53Z"</span>,
+  <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-06-25T19:27:53Z"</span>
 }
 </code></pre>
 <h3 id="get__whoami-responses">Responses</h3>
@@ -4312,8 +4394,8 @@ fetch(<span class="hljs-string">'/note-{id}'</span>,
   <span class="hljs-attr">"oa:hasSelector"</span>: {},
   <span class="hljs-attr">"content"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"@context"</span>: [],
-  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-06-25T15:45:29Z"</span>,
-  <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-06-25T15:45:29Z"</span>,
+  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-06-25T19:27:53Z"</span>,
+  <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-06-25T19:27:53Z"</span>,
   <span class="hljs-attr">"inReplyTo"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"context"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"json"</span>: {}
@@ -4816,8 +4898,8 @@ fetch(<span class="hljs-string">'/publication-{id}'</span>,
     <span class="hljs-attr">"profile"</span>: {},
     <span class="hljs-attr">"preferences"</span>: {},
     <span class="hljs-attr">"json"</span>: {},
-    <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-06-25T15:45:29Z"</span>,
-    <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-06-25T15:45:29Z"</span>
+    <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-06-25T19:27:53Z"</span>,
+    <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-06-25T19:27:53Z"</span>
   },
   <span class="hljs-attr">"published"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"string"</span>
