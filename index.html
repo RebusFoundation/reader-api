@@ -1549,11 +1549,6 @@ var n=this.pipeline.run(e.tokenizer(t)),r=new e.Vector,i=[],o=this._fields.reduc
                   </li>
                 
                   <li>
-                    <a href="#post__publication--id-_file-upload" class="toc-h2 toc-link" data-title="post__publication-{id}_file-upload">post__publication-{id}_file-upload</a>
-                    
-                  </li>
-                
-                  <li>
                     <a href="#get__publication--id-" class="toc-h2 toc-link" data-title="get__publication-{id}">get__publication-{id}</a>
                     
                   </li>
@@ -1802,13 +1797,13 @@ fetch(<span class="hljs-string">'/activity-{id}'</span>,
     <span class="hljs-attr">"profile"</span>: {},
     <span class="hljs-attr">"preferences"</span>: {},
     <span class="hljs-attr">"json"</span>: {},
-    <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-08T17:03:44Z"</span>,
-    <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-10-08T17:03:44Z"</span>
+    <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-23T17:17:33Z"</span>,
+    <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-10-23T17:17:33Z"</span>
   },
   <span class="hljs-attr">"summaryMap"</span>: {
     <span class="hljs-attr">"en"</span>: <span class="hljs-string">"string"</span>
   },
-  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-08T17:03:44Z"</span>
+  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-23T17:17:33Z"</span>
 }
 </code></pre>
 <h3 id="get__activity-{id}-responses">Responses</h3>
@@ -2363,144 +2358,6 @@ fetch(<span class="hljs-string">'/publication-{id}/{path}'</span>,
 To perform this operation, you must be authenticated by means of one of the following methods:
 Bearer
 </aside>
-<h2 id="post__publication--id-_file-upload">post__publication-{id}_file-upload</h2>
-<blockquote>
-<p>Code samples</p>
-</blockquote>
-<pre class="highlight tab tab-javascript--nodejs"><code><span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-fetch'</span>);
-<span class="hljs-keyword">const</span> inputBody = <span class="hljs-string">'{
-  "file": null,
-  "documentPath": "string",
-  "mediaType": "string",
-  "json": "string"
-}'</span>;
-<span class="hljs-keyword">const</span> headers = {
-  <span class="hljs-string">'Content-Type'</span>:<span class="hljs-string">'multipart/form-data'</span>,
-  <span class="hljs-string">'Authorization'</span>:<span class="hljs-string">'Bearer {access-token}'</span>
-
-};
-
-fetch(<span class="hljs-string">'/publication-{id}/file-upload'</span>,
-{
-  <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
-  <span class="hljs-attr">body</span>: inputBody,
-  <span class="hljs-attr">headers</span>: headers
-})
-.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
-    <span class="hljs-keyword">return</span> res.json();
-}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">body</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(body);
-});
-
-</code></pre>
-<p><code>POST /publication-{id}/file-upload</code></p>
-<p>POST /publication-:id/file-upload</p>
-<blockquote>
-<p>Body parameter</p>
-</blockquote>
-<pre class="highlight tab tab-yaml"><code><span class="hljs-attr">file:</span> <span class="hljs-literal">null</span>
-<span class="hljs-attr">documentPath:</span> <span class="hljs-string">string</span>
-<span class="hljs-attr">mediaType:</span> <span class="hljs-string">string</span>
-<span class="hljs-attr">json:</span> <span class="hljs-string">string</span>
-
-</code></pre>
-<h3 id="post__publication-{id}_file-upload-parameters">Parameters</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>In</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>path</td>
-<td>string</td>
-<td>true</td>
-<td>the id of the publication</td>
-</tr>
-<tr>
-<td>body</td>
-<td>body</td>
-<td>object</td>
-<td>false</td>
-<td>none</td>
-</tr>
-<tr>
-<td>» file</td>
-<td>body</td>
-<td>binary</td>
-<td>false</td>
-<td>none</td>
-</tr>
-<tr>
-<td>» documentPath</td>
-<td>body</td>
-<td>string</td>
-<td>false</td>
-<td>none</td>
-</tr>
-<tr>
-<td>» mediaType</td>
-<td>body</td>
-<td>string</td>
-<td>false</td>
-<td>none</td>
-</tr>
-<tr>
-<td>» json</td>
-<td>body</td>
-<td>string</td>
-<td>false</td>
-<td>stringified json data</td>
-</tr>
-</tbody>
-</table>
-<h3 id="post__publication-{id}_file-upload-responses">Responses</h3>
-<table>
-<thead>
-<tr>
-<th>Status</th>
-<th>Meaning</th>
-<th>Description</th>
-<th>Schema</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
-<td>file created</td>
-<td>None</td>
-</tr>
-<tr>
-<td>400</td>
-<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">Bad Request</a></td>
-<td>No file was included with upload OR Error connecting to google bucket</td>
-<td>None</td>
-</tr>
-<tr>
-<td>403</td>
-<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.3">Forbidden</a></td>
-<td>Access to publication {id} disallowed</td>
-<td>None</td>
-</tr>
-<tr>
-<td>404</td>
-<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td>
-<td>No publication with ID {id}</td>
-<td>None</td>
-</tr>
-</tbody>
-</table>
-<aside class="warning">
-To perform this operation, you must be authenticated by means of one of the following methods:
-Bearer
-</aside>
 <h2 id="get__publication--id-">get__publication-{id}</h2>
 <blockquote>
 <p>Code samples</p>
@@ -2628,8 +2485,8 @@ fetch(<span class="hljs-string">'/publication-{id}'</span>,
     <span class="hljs-attr">"profile"</span>: {},
     <span class="hljs-attr">"preferences"</span>: {},
     <span class="hljs-attr">"json"</span>: {},
-    <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-08T17:03:44Z"</span>,
-    <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-10-08T17:03:44Z"</span>
+    <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-23T17:17:34Z"</span>,
+    <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-10-23T17:17:34Z"</span>
   },
   <span class="hljs-attr">"published"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"string"</span>
@@ -3208,13 +3065,13 @@ fetch(<span class="hljs-string">'/reader-{id}/activity'</span>,
         <span class="hljs-attr">"profile"</span>: {},
         <span class="hljs-attr">"preferences"</span>: {},
         <span class="hljs-attr">"json"</span>: {},
-        <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-08T17:03:44Z"</span>,
-        <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-10-08T17:03:44Z"</span>
+        <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-23T17:17:34Z"</span>,
+        <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-10-23T17:17:34Z"</span>
       },
       <span class="hljs-attr">"summaryMap"</span>: {
         <span class="hljs-attr">"en"</span>: <span class="hljs-string">"string"</span>
       },
-      <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-08T17:03:44Z"</span>
+      <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-23T17:17:34Z"</span>
     }
   ]
 }
@@ -4408,8 +4265,8 @@ fetch(<span class="hljs-string">'/reader-{id}/notes'</span>,
       <span class="hljs-attr">"oa:hasSelector"</span>: {},
       <span class="hljs-attr">"content"</span>: <span class="hljs-string">"string"</span>,
       <span class="hljs-attr">"@context"</span>: [],
-      <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-08T17:03:44Z"</span>,
-      <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-10-08T17:03:44Z"</span>,
+      <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-23T17:17:34Z"</span>,
+      <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-10-23T17:17:34Z"</span>,
       <span class="hljs-attr">"publication"</span>: {
         <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>,
         <span class="hljs-attr">"author"</span>: [
@@ -4760,8 +4617,8 @@ fetch(<span class="hljs-string">'/reader-{id}'</span>,
   <span class="hljs-attr">"profile"</span>: {},
   <span class="hljs-attr">"preferences"</span>: {},
   <span class="hljs-attr">"json"</span>: {},
-  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-08T17:03:44Z"</span>,
-  <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-10-08T17:03:44Z"</span>
+  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-23T17:17:34Z"</span>,
+  <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-10-23T17:17:34Z"</span>
 }
 </code></pre>
 <h3 id="get__reader-{id}-responses">Responses</h3>
@@ -5267,8 +5124,8 @@ fetch(<span class="hljs-string">'/whoami'</span>,
   <span class="hljs-attr">"profile"</span>: {},
   <span class="hljs-attr">"preferences"</span>: {},
   <span class="hljs-attr">"json"</span>: {},
-  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-08T17:03:44Z"</span>,
-  <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-10-08T17:03:44Z"</span>
+  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-23T17:17:34Z"</span>,
+  <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-10-23T17:17:34Z"</span>
 }
 </code></pre>
 <h3 id="get__whoami-responses">Responses</h3>
@@ -5479,8 +5336,8 @@ fetch(<span class="hljs-string">'/job-{id}'</span>,
 <pre class="highlight tab tab-json"><code>{
   <span class="hljs-attr">"id"</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">"type"</span>: <span class="hljs-string">"epub"</span>,
-  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-08T17:03:44Z"</span>,
-  <span class="hljs-attr">"finished"</span>: <span class="hljs-string">"2019-10-08T17:03:44Z"</span>,
+  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-23T17:17:34Z"</span>,
+  <span class="hljs-attr">"finished"</span>: <span class="hljs-string">"2019-10-23T17:17:34Z"</span>,
   <span class="hljs-attr">"error"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"publicationId"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"status"</span>: <span class="hljs-number">302</span>
@@ -5668,8 +5525,8 @@ fetch(<span class="hljs-string">'/note-{id}'</span>,
   <span class="hljs-attr">"oa:hasSelector"</span>: {},
   <span class="hljs-attr">"content"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"@context"</span>: [],
-  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-08T17:03:44Z"</span>,
-  <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-10-08T17:03:44Z"</span>,
+  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2019-10-23T17:17:34Z"</span>,
+  <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2019-10-23T17:17:34Z"</span>,
   <span class="hljs-attr">"inReplyTo"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"context"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"json"</span>: {}
